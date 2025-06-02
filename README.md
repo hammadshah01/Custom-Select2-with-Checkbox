@@ -1,41 +1,50 @@
-📦 Custom Multiselect Dropdown with Checkboxes
-This project provides a clean, user-friendly multiselect dropdown built entirely in vanilla JavaScript and easily pluggable into any HTML or Laravel Blade view. It mimics Select2's functionality while being fully lightweight and dependency-free.
+🧩 Custom MultiSelect Dropdown with Checkboxes, Search & Select-All (Vanilla JS)
+This repository provides a lightweight and reusable custom multi-select dropdown component built with plain JavaScript, designed to mimic and enhance the functionality of plugins like Select2 — without any external dependencies.
 
-✅ Features
-Checkbox-based multiple selection
+🔥 Features
+✅ Custom-designed dropdown with checkboxes
+✅ Integrated search box to filter options
+✅ Select All / Deselect All option
+✅ Bootstrap-compatible checkbox styling (form-check-input)
+✅ Dynamic display of selected count (e.g., Selected (2), Selected (All))
+✅ Supports multiple dropdowns on the same page
+✅ Fully accessible via form submission
+✅ Hides original <select> and keeps it in sync (non-destructive)
 
-Select All and Deselect All functionality
+📦 How It Works
+This custom component enhances any <select multiple> element that has the class customselect. The original select is hidden, and a styled wrapper with a search bar, checkboxes, and a custom dropdown UI is rendered in its place. The component stays fully in sync with the original <select>, so form submissions and backend integrations work as expected.
 
-Real-time search/filter inside the dropdown
-
-Custom display label showing selected count (e.g., “Selected (3)”)
-
-Hides original <select multiple> element for clean UI
-
-Keyboard-friendly and mobile-responsive
-
-Laravel Blade integration friendly
-
-🔧 How It Works
-The script:
-
-Hides your original <select multiple> element
-
-Wraps it in a custom container
-
-Renders checkboxes for each <option>
-
-Allows searching and selecting/deselecting options
-
-Syncs selected checkboxes with the underlying <select> element
-
-🚀 Integration
-Just include the script at the end of your Blade or HTML file and add the class customselect to any <select multiple> element. The rest works automatically!
+📋 Usage
+Add the customselect class to your <select multiple>:
 
 html
 Copy
 Edit
-<select name="employees[]" class="form-select customselect" multiple>
-  <option value="1">John Doe</option>
-  <option value="2">Jane Smith</option>
+<select class="form-select customselect" multiple>
+    <option value="1">Option One</option>
+    <option value="2">Option Two</option>
 </select>
+Include the JS and optional styles from the repo in your Blade or HTML file.
+
+🧠 Example Behavior
+Typing into the search bar filters the list of options.
+
+Clicking "Select All" checks all boxes and marks all options as selected.
+
+Selected items are shown as a count in the display (not tags), e.g.:
+
+Select...
+
+Selected (2)
+
+Selected (All)
+
+💡 Why Use This?
+If you want a customizable, Bootstrap-compatible, and dependency-free alternative to Select2 for multi-select fields — especially in Laravel Blade or vanilla JS projects — this solution is lightweight, intuitive, and easily extendable.
+
+🛠 Tech Stack
+HTML5 <select multiple>
+
+Vanilla JavaScript (no jQuery)
+
+Bootstrap classes (form-select, form-check-input)
