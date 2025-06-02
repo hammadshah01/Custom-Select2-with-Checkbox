@@ -1,0 +1,73 @@
+   .custom-select-wrapper {
+    position: relative;
+    margin-bottom: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.custom-select-display {
+    background: #ffffff;
+    border: 1px solid #ced4da;
+    padding: 10px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    min-height: 42px;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+.custom-select-display:hover {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.15);
+}
+
+.custom-select-dropdown {
+    position: absolute;
+    background: #ffffff;
+    border: 1px solid #ced4da;
+    width: 100%;
+    max-height: 250px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    margin-top: 5px;
+}
+
+.custom-select-dropdown input[type="text"] {
+    width: 94%;
+    margin: 10px auto;
+    padding: 7px 10px;
+    display: block;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+.custom-select-dropdown input[type="text"]:focus {
+    border-color: #86b7fe;
+    outline: none;
+}
+
+.custom-select-dropdown label {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    font-weight: 400 !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    font-size: 14px !important;
+    transition: background 0.2s;
+    gap: 10px;
+}
+
+.custom-select-dropdown label:hover {
+    background-color: #f8f9fa;
+}
+
+.custom-select-dropdown input[type="checkbox"] {
+    margin: 0;
+}
